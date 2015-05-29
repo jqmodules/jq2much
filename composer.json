@@ -1,0 +1,12 @@
+{
+    "name": "jqmodules/jq2much",
+    "type": "utility",
+    "description": "Extension api to jQuery",
+    "keywords": ["javascript"],
+    "license": "MIT",
+    
+    "require": {
+    	"jquery": ">=1.8",
+       "webmodules/foo": ">=0.0.0"
+    }
+}
