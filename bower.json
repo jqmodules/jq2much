@@ -5,7 +5,7 @@
 	"description": "Extension api to jQuery",
 	"keywords": ["utils", "jquery"],
 	"dependencies": {
-		"webmodules-foo": ">=2.0.2",
+		"webmodules-foo": ">=3.0.0",
 		"webmodules-jquery": ">=1.8"
 	},
 	"license": "MIT",

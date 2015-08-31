@@ -6,7 +6,7 @@
 	"license": "MIT",
 
 	"require": {
-		"webmodules/foo": ">=2.0.2",
+		"webmodules/foo": ">=3.0.0",
 		"webmodules/jquery": ">=1.8"
 	}
 }
