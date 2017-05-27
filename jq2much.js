@@ -66,5 +66,42 @@ _define_('jq2much', function (jq2much, _jq2much_) {
         }
         return deferred.promise();
     };
+    
+    
+    
+   var pipe = function (condition) {
+        this.list = [];
+        this.deff = $.Deferred();
+        this.condition = condition || this.condition;
+    };
+
+    pipe.prototype = {
+        condition : function(){
+            return true;
+        },
+        done : function (callback) {
+            return this.deff.promise().done(callback)
+        },
+        add : function (prom) {
+            var pipe = this;
+            var list = this.list;
+            list.push(prom)
+            prom.always(function (resp) {
+                list.pop();
+                if (pipe.list.length == 0 && pipe.condition(resp)) {
+                    window.setTimeout(function () {
+                        if (list.length == 0) {
+                            pipe.deff.resolve();
+                        }
+                    }, 500);
+                }
+            })
+            return this;
+        }
+    };
+    
+    jQuery.dQ = function(){
+        return new pipe();
+    };
 
 });
