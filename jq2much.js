@@ -100,8 +100,8 @@ _define_('jq2much', function (jq2much, _jq2much_) {
         }
     };
     
-    jQuery.dQ = function(){
-        return new pipe();
+    jQuery.dQ = function(a,b,c,d){
+        return new pipe(a,b,c,d);
     };
 
 });
