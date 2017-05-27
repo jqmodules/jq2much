@@ -2,6 +2,6 @@
 	"name": "jqmodules/jq2much",
 	"jqmodules/jq2much": {
 		"js": ["jq2much.js"],
-		"on": ["webmodules/foo"]
+		"on": ["webmodules/foo","webmodules/jquery"]
 	}
 }
