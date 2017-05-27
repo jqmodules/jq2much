@@ -1,5 +1,5 @@
-_define_('jq2much', function (jq2much, _jq2much_) {
-
+!(function (root) {
+    root.jq2much = root.jq2much || {};
     var jQuery = _module_("jQuery");
 
     jQuery.fn.findSafe = function (selector, ignore) {
@@ -104,4 +104,4 @@ _define_('jq2much', function (jq2much, _jq2much_) {
         return new pipe(a,b,c,d);
     };
 
-});
+})(this);
