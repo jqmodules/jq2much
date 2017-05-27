@@ -1,6 +1,6 @@
 !(function (root) {
     root.jq2much = root.jq2much || {};
-    var jQuery = _module_("jQuery");
+    var jQuery = root.jQuery;
 
     jQuery.fn.findSafe = function (selector, ignore) {
         var $nested = this.find(ignore);
